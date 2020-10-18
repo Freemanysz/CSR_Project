@@ -4,16 +4,6 @@
     display: flex;
     padding: 0.9375rem 0;
 
-    >img {
-        width: 18.75rem;
-        margin: 0.9375rem;
-    }
-
-    >video {
-        width: 18.75rem;
-        margin: 0.9375rem;
-    }
-
     .text_heading {
         width: 100%;
     }
@@ -22,12 +12,25 @@
         line-height: 1.375rem;
     }
 
-    .media-right {
-        float: right;
-    }
+    .media-block {
+        max-width: 400px;
+        width: 100%;
+        height: auto;
+        margin: 0.9375rem;
 
-    .media-left {
-        float: left;
+        >img {
+            width: 100%;
+            height: auto;
+        }
+
+        >video {
+            width: 100%;
+            height: auto;
+        }
+        
+        @media screen and (max-width: 900px) {
+            min-width: 200px;
+        }
     }
 }
 

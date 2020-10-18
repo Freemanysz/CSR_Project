@@ -9,13 +9,14 @@ export default class {
         document.title = 'text-with-media-component'
         container.innerHTML = template
         let media = document.createElement(contentJson.content.media.type)
+        let media_div = document.createElement("div")
         media.setAttribute("src", image)
+        media_div.setAttribute("class", 'media-block')
+            media_div.append(media)
         if (config.mediaAlign == 'right') { 
-            media.setAttribute("class", 'media-right')
-            document.querySelector('.text_with_media_component').append(media)
+            document.querySelector('.text_with_media_component').append(media_div)
         } else {
-            media.setAttribute("class", 'media-left')
-            document.querySelector('.text_with_media_component').prepend(media)
+            document.querySelector('.text_with_media_component').prepend(media_div)
         }
 
         let textHedaing = document.querySelector('#text_with_media_heading');

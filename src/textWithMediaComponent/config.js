@@ -1,6 +1,6 @@
 
 const textWithMediaComponentConf = {
-    mediaAlign: "right"
+    mediaAlign: "left"
 }
 
 export default textWithMediaComponentConf
